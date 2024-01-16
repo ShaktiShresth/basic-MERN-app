@@ -63,6 +63,8 @@ router.post("/signin", async (req, res) => {
           //expires in 30 days from logged in time.
           expires: new Date(Date.now() + 25892000000),
           httpOnly: true,
+          secure: "false",
+          sameSite: "none",
         });
         res.status(200).json({ message: "User signed in successfully" });
       }
