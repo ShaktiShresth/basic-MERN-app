@@ -14,13 +14,16 @@ const Contact = () => {
   // handle/render user data
   const renderUserData = async () => {
     try {
-      const response = await fetch("http://localhost:5000/getdata", {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        credentials: "include",
-      });
+      const response = await fetch(
+        "https://basic-mern-app-server.vercel.app/getdata",
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          credentials: "include",
+        }
+      );
 
       const data = await response.json();
 
