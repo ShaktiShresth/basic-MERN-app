@@ -74,13 +74,16 @@ const Contact = () => {
     }
 
     // fetch - post contact data(name, email, phone, message) to server side
-    const response = await fetch("/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ name, email, phone, message }),
-    });
+    const response = await fetch(
+      "https://basic-mern-app-server.vercel.app/contact",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ name, email, phone, message }),
+      }
+    );
     // json data
     const data = await response.json();
     // console.log(data);

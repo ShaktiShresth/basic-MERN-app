@@ -35,20 +35,23 @@ const SignUp = () => {
     }
 
     // fetch - post (name,email,phone,work,password,cpassword) to server side
-    const response = await fetch("http://localhost:5000/register", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        name,
-        email,
-        phone,
-        work,
-        password,
-        cpassword,
-      }),
-    });
+    const response = await fetch(
+      "https://basic-mern-app-server.vercel.app/register",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name,
+          email,
+          phone,
+          work,
+          password,
+          cpassword,
+        }),
+      }
+    );
     // json data
     const data = await response.json();
 

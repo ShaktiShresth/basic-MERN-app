@@ -10,13 +10,16 @@ const Home = () => {
   // handle/render user data function
   const renderUserData = async () => {
     try {
-      const response = await fetch("http://localhost:5000/getData", {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        credentials: "include",
-      });
+      const response = await fetch(
+        "https://basic-mern-app-server.vercel.app/getData",
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          credentials: "include",
+        }
+      );
       // json data
       const data = await response.json();
       // console.log(data);

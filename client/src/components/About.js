@@ -10,14 +10,17 @@ const About = () => {
   // handle or get about page data via server side
   const callAboutPage = async () => {
     try {
-      const response = await fetch("http://localhost:5000/about", {
-        method: "GET",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        credentials: "include",
-      });
+      const response = await fetch(
+        "https://basic-mern-app-server.vercel.app/about",
+        {
+          method: "GET",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          credentials: "include",
+        }
+      );
       // json data
       const data = await response.json();
       // console.log(data);

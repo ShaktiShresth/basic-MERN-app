@@ -32,19 +32,22 @@ const Login = () => {
     }
 
     // fetch - post email & password to the server
-    const response = await fetch("http://localhost:5000/signin", {
-      method: "POST",
-      headers: {
-        Accept: "application/json",
+    const response = await fetch(
+      "https://basic-mern-app-server.vercel.app/signin",
+      {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
 
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        email,
-        password,
-      }),
-      credentials: "include", // Include credentials (cookies)
-    });
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email,
+          password,
+        }),
+        credentials: "include", // Include credentials (cookies)
+      }
+    );
     // json data
     const data = await response.json();
 

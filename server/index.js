@@ -8,7 +8,7 @@ app.use(cookieParser());
 
 app.use(
   cors({
-    origin: "http://localhost:3000", // Allow requests from this origin
+    origin: "https://basic-mern-app-client.vercel.app", // Allow requests from this origin
     methods: "GET,POST",
     credentials: true, // Allow credentials (cookies, authorization headers)
   })

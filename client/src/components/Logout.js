@@ -14,7 +14,7 @@ const Logout = () => {
   // handle logout function
   const logoutUser = async () => {
     //fetch - post for logout
-    await fetch("http://localhost:5000/logout", {
+    await fetch("https://basic-mern-app-server.vercel.app/logout", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
